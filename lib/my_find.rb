@@ -1,6 +1,6 @@
 require 'pry'
 
-#=begin
+=begin
 def my_find(collection)
 i = 0 
 while i < collection.length 
@@ -9,13 +9,14 @@ if yield(collection[i])
 end 
 i += 1 
 end
-end
+=end
 
-=begin def my_find(collection)
+def my_find(collection)
 i = 0 
+current_location = collection.length - i
 while i < collection.length 
-if yield(collection[(collection.length - i)])
-  return collection[(collection.length - i)]
+if yield(collection[current_location])
+  return collection[current_location]
 end 
 binding.pry
 i += 1 
