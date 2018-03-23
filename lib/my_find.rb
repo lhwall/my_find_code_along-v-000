@@ -1,6 +1,5 @@
 require 'pry'
 
-=begin
 def my_find(collection)
 i = 0 
 while i < collection.length 
@@ -9,20 +8,19 @@ if yield(collection[i])
 end 
 i += 1 
 end
-=end
+end
+
+=begin extremely unlikely anyone will ever see this but I wanted to see if I could find the last matching item in an array instead of the first 
 
 def my_find(collection)
 i = 0 
 
 while i < collection.length 
-current_location = (collection.length - i - 1).to_i
-if yield(collection[current_location])
-  return collection[current_location]
+if yield(collection[collection.length - i - 1])
+  return collection[collection.length - i - 1]
 end 
 
 i += 1 
 end
 end
-
-collection = (1..100).to_a
-my_find(collection) {|i| i % 3 == 0 && i % 5 == 0 }
+=end
