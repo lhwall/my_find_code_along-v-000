@@ -13,7 +13,7 @@ end
 
 def my_find(collection)
 i = 0 
-current_location = collection.length - i
+current_location = (collection.length - i)
 while i < collection.length 
 if yield(collection[current_location])
   return collection[current_location]
