@@ -13,8 +13,8 @@ end
 def my_find(collection)
 i = 0 
 while i < collection.length 
-if yield(collection[collection.length - i])
-  return collection[i]
+if yield(collection[(collection.length - i)])
+  return collection[(collection.length - i)]
 end 
 i += 1 
 end
