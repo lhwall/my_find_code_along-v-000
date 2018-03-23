@@ -16,6 +16,7 @@ while i < collection.length
 if yield(collection[(collection.length - i)])
   return collection[(collection.length - i)]
 end 
+binding.pry
 i += 1 
 end
 end
