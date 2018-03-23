@@ -25,4 +25,4 @@ end
 end
 
 collection = (1..100).to_a
-my_find(collection) {|i| i % 3 == 0 && i % 5 == 0 }
+my_find(collection) {|current_location| current_location % 3 == 0 && current_location % 5 == 0 }
