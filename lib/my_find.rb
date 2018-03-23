@@ -19,7 +19,7 @@ current_location = (collection.length - i - 1).to_i
 if yield(collection[current_location])
   return collection[current_location]
 end 
-binding.pry
+
 i += 1 
 end
 end
